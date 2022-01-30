@@ -1,4 +1,5 @@
 const express = require('express');
+const config = require('./serverConfig');
 
 const app = express();
 
@@ -12,7 +13,8 @@ app.get('/api/helloworld', async (req, res) => {
 // Handle static pages
 app.use(express.static('dist'));
 
-// Serve the files on port 3000.
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!\n');
+// Start the server
+app.listen(config.PORT, function () {
+  console.log('Running on port: ' + config.PORT + ', NODE_ENV: ' + config.NODE_ENV + ", DOMAIN:" + config.DOMAIN);
 });
+

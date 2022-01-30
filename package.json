@@ -5,10 +5,9 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
+    "build": "webpack --mode production",
     "start-client": "webpack-dev-server --mode development",
-    "build": "webpack --mode development",
-    "build-prod": "webpack --mode production",
-    "server": "node server.js"
+    "build-dev": "webpack --mode development"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +22,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
-    "@types/axios": "^0.14.0"
+    "@types/axios": "^0.14.0",
+    "dotenv": "^14.3.2"
   }
 }

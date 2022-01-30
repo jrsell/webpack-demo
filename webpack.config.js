@@ -1,7 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const serverConfig = require('./serverConfig');
 
- module.exports = {
+module.exports = {
 
   // Externals included via CDN
   externals: {
@@ -50,7 +52,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
       mainHeader: 'Sellgren',
       template: './src/index.ejs',
       chunks: ['component'],
-  }),    
+    }),
+
+    /* Inject Compile-time Configuration*/
+    new webpack.DefinePlugin({
+      __CONFIG__: JSON.stringify(serverConfig),
+    })
   ],  
 
   // creates source map
