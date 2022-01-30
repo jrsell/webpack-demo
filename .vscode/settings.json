@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/dfcf507a-6986-40b6-805e-3d65ef871d0e/resourceGroups/appsvc_linux_canada/providers/Microsoft.Web/sites/GetCognito-App-Test",
+    "appService.deploySubpath": "."
+}
