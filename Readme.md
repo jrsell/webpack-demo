@@ -18,14 +18,18 @@ npm start
 
 3. Run the client in dev mode:
 
+```
 npm run start-client
-
+```
     or
 
 4. Build the client
 
+```
 npm run build-client
-
+```
     and then
 
-navigate to: http://localhost:3000
+```
+Navigate to: http://localhost:3000
+```
