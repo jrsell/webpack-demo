@@ -4,10 +4,10 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./src/server/server.js",
     "build": "webpack --mode production",
-    "start-client": "webpack-dev-server --mode development",
-    "build-dev": "webpack --mode development"
+    "build-dev": "webpack --mode development",
+    "start-client": "webpack-dev-server --mode development"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,4 @@
-import printMe from './print';
+import printMe from '../utils/printMe';
 function component() {
     const element = document.createElement('div');    
     element.innerHTML = `    

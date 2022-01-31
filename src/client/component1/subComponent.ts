@@ -1,21 +1,17 @@
-import printMe from './print';
-
-export class MyComponent {
+export class MySubComponent {
     _rootNode: HTMLElement;
     constructor(rootNode: HTMLElement){
         this._rootNode = rootNode;
         const element = document.createElement('div');    
         element.innerHTML = `    
-        <div><p>Hello This is a component!</p></div>
+        <div><p>Hello This is a sub component!</p></div>
         `;
         const myBut = document.createElement('button');
-        myBut.innerText = "Click me";
-        myBut.onclick = printMe;
+        myBut.innerText = "Click menow";
+        myBut.onclick = () => { alert('hello'); }
         element.appendChild(myBut);
     
         this._rootNode.appendChild(element);    
     }
 }
 
-new MyComponent(document.body);
-//document.body.appendChild(component());

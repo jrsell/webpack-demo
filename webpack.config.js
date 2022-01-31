@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const serverConfig = require('./serverConfig');
+const serverConfig = require('./src/server/serverConfig');
 
 module.exports = {
 
@@ -12,8 +12,8 @@ module.exports = {
  
   // Module entry points
   entry: {
-    index: './src/index.ts',
-    component: './src/component2.ts',
+    index: './src/client/component1/component1.ts',
+    component: './src/client/component2/component2.ts',
   },
 
   // Output options
@@ -43,14 +43,14 @@ module.exports = {
         filename: 'index.html',
         title: 'Development',
         mainHeader: 'Julien',
-        template: './src/index.ejs',
+        template: './src/client/index.ejs',
         chunks: ['index'],  // inserts the built bundle
     }),
     new HtmlWebpackPlugin({
       filename: 'index2.html',
       title: 'Hello',
       mainHeader: 'Sellgren',
-      template: './src/index.ejs',
+      template: './src/client/index.ejs',
       chunks: ['component'],
     }),
 
